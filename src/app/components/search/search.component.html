@@ -1,0 +1,8 @@
+<div class="container">
+  <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
+    <label>USERNAME :</label><br />
+    <input type="text" formControlName="username" /><br /><br />
+
+    <button class="btn btn-primary">search</button>
+  </form>
+</div>

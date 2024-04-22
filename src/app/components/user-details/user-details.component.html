@@ -1,0 +1,38 @@
+<!--<p>user-details works!</p>
+avatar_url: created_at: followers: public_repos: login:-->
+<div class="card mb-3">
+  <img
+    src="{{ userDetail.avatar_url }}"
+    class="card-img-top"
+    alt="..."
+    width="300px"
+    height="500px"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ userDetail.login }}</h5>
+    <p class="card-text">Total Repos : {{ userDetail.public_repos }}</p>
+    <p class="card-text">Total followers : {{ userDetail.followers }}</p>
+    <p class="card-text">
+      <small class="text-body-secondary"
+        >joined : {{ userDetail.created_at | date }}</small
+      >
+    </p>
+
+    <p>
+      <a
+        href="{{ userDetail.html_url }}"
+        target="_blank"
+        class="btn btn-success btn-sm"
+        >View profile on github</a
+      >
+    </p>
+    <p>
+      <a
+        href="{{ userDetail.repos_url }}"
+        target="_blank"
+        class="btn btn-success btn-sm"
+        >View repo
+      </a>
+    </p>
+  </div>
+</div>
